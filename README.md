@@ -7,12 +7,12 @@
 sudo apt update -y && sudo apt upgrade -y
 
 # repoyu klonlayıp yapılandıralım
-git clone --recursive https://github.com/engram-network/tokio-docker.git 
+git clone --recursive https://github.com/engram-network/tokio-docker.git
 cd tokio-docker
-chmod +x ./scripts/*.sh
 
-# bash ile scripti çalıştırınca bir kaç yerde y/n soracak y diyebilirsiniz.
-bash ./scripts/init-dependency.sh
+# gerekli paketler için asdf scriptini çalıştıralım
+./scripts/install-asdf.sh
+
 mkdir -p execution consensus validator
 ```
 ```console
@@ -22,11 +22,19 @@ sudo nano docker-compose.yml
 # aşağıdaki kısımları dosyamızın içinde bulup değiştirelim.
 identity=Ruesandora1508
 enr-address=IpAdresimiz
-graffiti= RuesCommunity
+graffiti=RuesCommunity
 # bu 3 kısmı değiştirin kendinize göre daha sonra CTRL X Y ENTER ile kaydedip çıkalım.
+
+# docker'i yükleyelim
+./scripts/install-docker.sh
+
+# ve run edelim
+docker compose up -d
 ```
 
 <h1 align="center">Log kontrolleri</h1>
+
+> Loglar sizde farklı olabilir benim kurulumum eskiye ait, güncel versionunu yüklüyorsunuz siz.
 
 ```console
 # İlk olarak buradan loglara bakıyoruz:
@@ -53,6 +61,30 @@ docker logs lighthouse_cl -f
 ![image](https://github.com/ruesandora/Engram/assets/101149671/838894ba-fffa-46b7-aad4-0ad2c6dc87ed)
 
 <h1 align="center">Deposit işlemleri</h1>
+
+```console
+# bu komut ile mnemonic oluşturuyor ve yedekliyoruz, akabinde bir EVM cüzdana import ediyoruz.
+eth2-val-tools mnemonic 
+```
+```console
+# içersine giriyoruz
+nano ./scripts/validator-deposit-data.sh
+
+# Aşağıdaki kısımları değiştiriyoruz:
+amount: # 32000000000
+withdrawals-mnemonic: # yukarda oluşturduğumuz mnemonicleri giriyoruz
+validators-mnemonic: # yukarda oluşturduğumuz mnemonicleri giriyoruz
+from: # mnemonicleri import ettiğimiz ve token aldığımız cüzdan adresi
+privatekey: # mnemonicleri import ettiğimiz cüzdanın private keyi
+```
+
+
+
+
+
+
+
+
 
 
 
