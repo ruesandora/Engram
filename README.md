@@ -107,13 +107,14 @@ bash ./scripts/validator-deposit-data.sh
 > [Bu](https://docs.google.com/forms/d/e/1FAIpQLSeDF_UA5IDI49vJ99EmumHq3eyLhdiVaENTyobw2Egg9AgYhQ/viewform) formu doldurun ve bir kaç gün içinde [burada](https://nodemon.engram.tech/) listeleneceksiniz.
 
 
+<h1 align="center">Hatalar Ve Çözümleri</h1>
+> Syntax error near unexpected token new line Hatası
 
-13. line error new line error gibi bir hata alırsanız 
-Memoricleri Cüzdan Adresini ve Cüzdan Private Keyini ekledikten sonra
-Burayı sağdaki kopyala işaretiyle kopyalayıp text dosyasında düzenleyerek 
 nano ./scripts/validator-deposit-data.sh
-Bu kısımdaki tüm yazıları CTRL+K ile silip
-Düzenlediğiniz text dosyasını CTRL+A ile kopyalayın ve kaydedip kapatın.
+
+Bu kısımdaki tüm yazıları CTRL+K ile siliyorsunuz.
+
+Sağdaki kopyalama işareti ile kopyalayıp text üzerinde düzenleyerek ctrl a ile kopyalayıp yapıştırıyorsunuz.
 
 ```
 #!/bin/bash
