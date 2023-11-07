@@ -6,6 +6,14 @@
 
 > Önemli linkler: [Duyuru](https://t.me/RuesAnnouncement) - [Sohbet](https://t.me/RuesChat) -  [WP Kanalı](https://whatsapp.com/channel/0029VaBcj7V1dAw1H2KhMk34) - [Discord](https://discord.gg/pmaaU4J2)
 
+<h1 align="center">Donanımm</h1>
+
+> [Hetzner](https://github.com/ruesandora/Hetzner) kullanıyorum.
+
+```
+2 CPU - 4 RAM - 40 SSD - Ubuntu
+```
+
 <h1 align="center">Kurulum</h1>
 
 ```console
