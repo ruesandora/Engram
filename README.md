@@ -64,8 +64,13 @@ docker logs lighthouse_cl -f
 
 ```console
 # bu komut ile mnemonic oluşturuyor ve yedekliyoruz, akabinde bir EVM cüzdana import ediyoruz.
-eth2-val-tools mnemonic 
+eth2-val-tools mnemonic
 ```
+
+> Çıkan 24 kelimeyi metamaska import edin.
+
+> Discord faucet request kanalından token isteyin
+
 ```console
 # içersine giriyoruz
 nano ./scripts/validator-deposit-data.sh
@@ -76,6 +81,9 @@ withdrawals-mnemonic: # yukarda oluşturduğumuz mnemonicleri giriyoruz
 validators-mnemonic: # yukarda oluşturduğumuz mnemonicleri giriyoruz
 from: # mnemonicleri import ettiğimiz ve token aldığımız cüzdan adresi
 privatekey: # mnemonicleri import ettiğimiz cüzdanın private keyi
+
+# Deposit ile işlemi bitiriyoruz
+bash ./scripts/validator-deposit-data.sh
 ```
 
 
