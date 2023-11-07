@@ -58,11 +58,12 @@ docker logs lighthouse_cl -f
 
 > sync olmaya çalışıyor: 
 
-![image](https://github.com/ruesandora/Engram/assets/101149671/951a89d4-7c34-4857-a8bd-05e3acba8dd1)
+![image](https://github.com/ruesandora/Engram/assets/101149671/d042ce55-0131-4ee6-8b39-8d3d81f0b704)
 
 > sync olmaya başladı:
 
-![image](https://github.com/ruesandora/Engram/assets/101149671/8eaaaf47-874a-454b-a1d0-fd27cb4c9077)
+![image](https://github.com/ruesandora/Engram/assets/101149671/e6f205d9-b938-4bb9-aac8-3f18863df468)
+
 
 ```console
 # sync işlemleri başladıktan bir kaç dakika sonra
@@ -72,7 +73,8 @@ docker logs lighthouse_cl -f
 
 > sync olmuş versionu aşağıdaki gibidir - güncel blok [burada](https://beaconscan.engram.tech/)
 
-![image](https://github.com/ruesandora/Engram/assets/101149671/838894ba-fffa-46b7-aad4-0ad2c6dc87ed)
+![image](https://github.com/ruesandora/Engram/assets/101149671/5feac68e-2cac-4dba-b15a-dc100f8f9632)
+
 
 <h1 align="center">Deposit işlemleri</h1>
 
