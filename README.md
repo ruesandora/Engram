@@ -1,4 +1,4 @@
-<h1 align="center">Engram</h1>
+<h1 align="center">Engram Network</h1>
 
 > Kurulum nedenlerim: Donanım düşük, teşvikle, kısa sürecek ve sınırlı katılımcı.
 
