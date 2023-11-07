@@ -108,6 +108,7 @@ bash ./scripts/validator-deposit-data.sh
 
 
 <h1 align="center">Hatalar Ve Çözümleri</h1>
+
 > Syntax error near unexpected token new line Hatası
 
 nano ./scripts/validator-deposit-data.sh
