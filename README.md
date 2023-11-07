@@ -108,6 +108,47 @@ bash ./scripts/validator-deposit-data.sh
 
 
 
+13. line error new line error gibi bir hata alırsanız 
+Memoricleri Cüzdan Adresini ve Cüzdan Private Keyini ekledikten sonra
+Burayı sağdaki kopyala işaretiyle kopyalayıp text dosyasında düzenleyerek 
+nano ./scripts/validator-deposit-data.sh
+Bu kısımdaki tüm yazıları CTRL+K ile silip
+Düzenlediğiniz text dosyasını CTRL+A ile kopyalayın ve kaydedip kapatın.
+
+---
+#!/bin/bash
+
+amount=32000000000
+smin=0
+smax=1
+
+eth2-val-tools deposit-data \
+  --source-min=$smin \
+  --source-max=$smax \
+  --amount=32000000000 \
+  --fork-version=0x10000130 \
+  --withdrawals-mnemonic="memonicler" \
+  --validators-mnemonic="memonicler" > testnet_deposit_$smin\_$smax.txt
+
+while read x; do
+   account_name="$(echo "$x" | jq '.account')"
+   pubkey="$(echo "$x" | jq '.pubkey')"
+   echo "Sending deposit for validator $account_name $pubkey"
+   ethereal beacon deposit \
+      --allow-unknown-contract=true \
+      --address="0x11111c907e6ddfb954d5827c5b42cbca1ddc025e" \
+      --connection=https://engram.tech/testnet \
+      --data="$x" \
+      --allow-excessive-deposit \
+      --value="$amount" \
+      --from="cüzdan adresin" \
+      --privatekey="cüzdanprivatekeyin" # the public key's private key
+   echo "Sent deposit for validator $account_name $pubkey"
+   sleep 2
+done < testnet_deposit_$smin\_$smax.txt
+
+
+---
 
 
 
