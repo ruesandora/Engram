@@ -1,5 +1,11 @@
 <h1 align="center">Engram</h1>
 
+> Kurulum nedenlerim: Donanım düşük, teşvikle, kısa sürecek ve sınırlı katılımcı.
+
+> Tüm süreç [burada](https://engramnet.io/engram-tokio-testnet-program/) listeli.
+
+> Önemli linkler: [Duyuru](https://t.me/RuesAnnouncement) - [Sohbet](https://t.me/RuesChat) -  [WP Kanalı](https://whatsapp.com/channel/0029VaBcj7V1dAw1H2KhMk34) - [Discord](https://discord.gg/pmaaU4J2)
+
 <h1 align="center">Kurulum</h1>
 
 ```console
@@ -86,7 +92,9 @@ privatekey: # mnemonicleri import ettiğimiz cüzdanın private keyi
 bash ./scripts/validator-deposit-data.sh
 ```
 
+# Kurulum sonrası
 
+> [Bu](https://docs.google.com/forms/d/e/1FAIpQLSeDF_UA5IDI49vJ99EmumHq3eyLhdiVaENTyobw2Egg9AgYhQ/viewform) formu doldurun ve bir kaç gün içinde [burada](https://nodemon.engram.tech/) listeleneceksiniz.
 
 
 
