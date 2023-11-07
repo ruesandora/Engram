@@ -115,7 +115,7 @@ nano ./scripts/validator-deposit-data.sh
 Bu kısımdaki tüm yazıları CTRL+K ile silip
 Düzenlediğiniz text dosyasını CTRL+A ile kopyalayın ve kaydedip kapatın.
 
----
+```
 #!/bin/bash
 
 amount=32000000000
@@ -148,7 +148,7 @@ while read x; do
 done < testnet_deposit_$smin\_$smax.txt
 
 
----
+```
 
 
 
