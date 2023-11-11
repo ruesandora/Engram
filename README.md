@@ -107,9 +107,53 @@ bash ./scripts/validator-deposit-data.sh
 > [Bu](https://docs.google.com/forms/d/e/1FAIpQLSeDF_UA5IDI49vJ99EmumHq3eyLhdiVaENTyobw2Egg9AgYhQ/viewform) formu doldurun ve bir kaç gün içinde [burada](https://nodemon.engram.tech/) listeleneceksiniz.
 
 
+<h1 align="center">Hatalar Ve Çözümleri</h1>
+
+> Syntax error near unexpected token new line Hatası
+```
+nano ./scripts/validator-deposit-data.sh
+```
+Bu kısımdaki tüm yazıları CTRL+K ile siliyorsunuz.
+
+Sağdaki kopyalama işareti ile kopyalayıp text üzerinde düzenleyerek ctrl a ile kopyalayıp yapıştırıyorsunuz.
+
+```
+#!/bin/bash
+
+amount=32000000000
+smin=0
+smax=1
+
+eth2-val-tools deposit-data \
+  --source-min=$smin \
+  --source-max=$smax \
+  --amount=32000000000 \
+  --fork-version=0x10000130 \
+  --withdrawals-mnemonic="memonicler" \
+  --validators-mnemonic="memonicler" > testnet_deposit_$smin\_$smax.txt
+
+while read x; do
+   account_name="$(echo "$x" | jq '.account')"
+   pubkey="$(echo "$x" | jq '.pubkey')"
+   echo "Sending deposit for validator $account_name $pubkey"
+   ethereal beacon deposit \
+      --allow-unknown-contract=true \
+      --address="0x11111c907e6ddfb954d5827c5b42cbca1ddc025e" \
+      --connection=https://engram.tech/testnet \
+      --data="$x" \
+      --allow-excessive-deposit \
+      --value="$amount" \
+      --from="cüzdan adresin" \
+      --privatekey="cüzdanprivatekeyin" # the public key's private key
+   echo "Sent deposit for validator $account_name $pubkey"
+   sleep 2
+done < testnet_deposit_$smin\_$smax.txt
 
 
 
+```
+
+ 
 
 
 
