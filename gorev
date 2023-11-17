@@ -13,7 +13,15 @@ Birinci hafta görevleri bitti.
 <h1 align="center">"Sonraki" diyoruz "Week 2 Submission" görevleri geliyor.</h1>
 
 1- https://thirdweb.com engram test wallet ile giriş yaptım/ üye oldum. 
-https://thirdweb.com/dashboard/contracts/deploy +deploy contract, token, deploy now sırası ile tıklayarak kontrat oluşturdum. 
+https://thirdweb.com/dashboard/contracts/deploy +deploy contract, token, deploy now sırası ile tıklayalım. Sağ tarafta en atlta ağı seçelim açılan pencere "add custom network" tıklayıp elle bilgileri girelim. Deplow now dediğimizde işimiz bitiyor.
+
+Engram Test Network RPC:
+Blockchain Name: Engram Tokio Testnet
+RPC Address: https://engram.tech/testnet
+Chain ID: 130
+Ticker: tGRAM
+
+
 https://scan.engram.tech/ sitesine girip kontrat oluşturduğumda ürettiğim tx i cevap olarak giriyoruz.
 
 2- Token oluşturduumuz için cevabımız "ERC-20"
