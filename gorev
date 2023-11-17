@@ -13,6 +13,7 @@ Birinci hafta görevleri bitti.
 <h1 align="center">"Sonraki" diyoruz "Week 2 Submission" görevleri geliyor.</h1>
 
 1- https://thirdweb.com engram test wallet ile giriş yaptım/ üye oldum. 
+faucet-tokio.engram.tech faucetten token alalım.
 https://thirdweb.com/dashboard/contracts/deploy +deploy contract, token, deploy now sırası ile tıklayalım. Sağ tarafta en atlta ağı seçelim açılan pencere "add custom network" tıklayıp elle bilgileri girelim. Deplow now dediğimizde işimiz bitiyor.
 
 Engram Test Network RPC:
