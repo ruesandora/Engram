@@ -35,7 +35,7 @@ RPC Address: https://engram.tech/testnet
 Chain ID: 130
 Ticker: tGRAM
 
-https://scan.engram.tech/ sitesine girip kontrat tx i bulup cevap olarak giriyoruz.
+## tx başarılı olduysa https://scan.engram.tech/ sitesine girip kontrat tx i bulup cevap olarak giriyoruz.
 
 # Remix ile olan Yöntem (ERC-20 DEPLOY GÖREVİ)
 
@@ -125,4 +125,10 @@ contract ERC20Token {
 Sonra alttaki görselde 1. yere tıklıyoruz, 2. yerde Injected Provider - Metamaskı seçiyoruz, 3. Yerde Deploy butonuna basıyoruz! Bu işlemleri Engram Ağında yaptığınıza emin olun!
 
 ![image](https://github.com/ruesandora/Engram/assets/76253089/fadbf2ac-37f2-4d31-a16d-921c1046042e)
+
+## Tx başarılı olduysa https://scan.engram.tech/ sitesine girip kontrat tx i bulup cevap olarak giriyoruz.
+
+2. Görevin cevabı ERC20
+3. Görev: Tokenimize İsim giriyoruz (Formdaki örnek gibi)
+4. Görev: Tokenimizin amacı nedir (Formdaki örneğe göre bir şeyler yazın)
 
