@@ -21,7 +21,7 @@ Birinci hafta görevleri bitti. Şimdi 2. hafta görevleri
 <h1 align="center">Aynı formda "Sonraki" diyoruz "Week 2 Submission" görevleri geliyor. Thirtweb ile yapamazsanız Remixi kullanın.</h1>
 
 <br>
-1. Görev için Token Kontratı Deploy etmemiz gerek, ThirdWeb ile olan yöntem olmazsa, Remix ile olan yöntemi dene. İkisini de yapmana gerek yok
+1. Görev için ERC-20 Kontratı Deploy etmemiz gerek, ThirdWeb ile olan yöntem olmazsa, Remix ile olan yöntemi dene. İkisini de yapmana gerek yok
 
 # Thirdweb ile olan Yöntem (ERC-20 DEPLOY GÖREVİ)
 
