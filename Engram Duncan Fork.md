@@ -159,8 +159,12 @@ INFO Connected to beacon node(s)             synced: 1, available: 1, total: 1,
 INFO Validator exists in beacon chain        fee_recipient: 0x617b…063d,
 INFO Awaiting activation                     slot: 17409, epoch: 544, validators: 32, service: notifier
 
-Bendeki loglar bu şekilde:
+```
+>Nodeun onaylanması 30dk--2sa arasında olabilir.
 
+## Eğer ```docker logs -f lighthouse_vc``` komutu loglarınız aşağıdaki gibi ise ```password.txt``` dosyasını kontrol etmeniz gerekiyor.
+
+```bash
 Nov 23 16:34:30.001 INFO No validators present                   msg: see `lighthouse vm create --help` or the HTTP API documentation, service: notifier
 Nov 23 16:34:42.000 INFO Connected to beacon node(s)             synced: 1, available: 1, total: 1, service: notifier
 Nov 23 16:34:42.001 INFO No validators present                   msg: see `lighthouse vm create --help` or the HTTP API documentation, service: notifier
@@ -170,12 +174,27 @@ Nov 23 16:35:06.000 INFO Connected to beacon node(s)             synced: 1, avai
 Nov 23 16:35:06.001 INFO No validators present                   msg: see `lighthouse vm create --help` or the HTTP API documentation, service: notifier
 Nov 23 16:35:18.001 INFO Connected to beacon node(s)             synced: 1, available: 1, total: 1, service: notifier
 Nov 23 16:35:18.001 INFO No validators present                   msg: see `lighthouse vm create --help` or the HTTP API documentation, service: notifier
-
 ```
-Nodeun onaylanması 30dk--2sa arasında olabilir.
+### Dosyayı açtığınızda kurulumda oluşturduğunuz şifre yerine 0x.... şeklinde ise 0x.... i silip yerine şifrenizi girmeniz lazım.Bunu yapmanın 2 yolu var.
+```console
 
+# 1.Mobaxterm/Winscp ile direkt dosya üzerinden.
+cd tokio-docker
+docker compose down 
+# Node u durdurduktan sonra <tokio-docker/custom_config_data> dizinine girip password.txt dosyasında düzenlemeyi yapıp kayıt edin.
+docker compose up -d # ile node unuzu yeniden başlatın.
+
+# 2.Terminal üzerinden.
+cd tokio-docker
+docker compose down 
+cd tokio-docker/custom_config_data 
+sudo nano password.txt #Düzeltmeyi yaptıktan sonra Ctrl X+Y enter yapın.
+cd ..
+docker compose up -d
+```
+
+### Peerlarda sorun olursa loglar aşağıdaki gibi olacaktır:
 ```bash
-Peerlarda sorun olursa loglar aşağıdaki gibi olacaktır:
 
 striatum_el
 WARN [10-03|04:50:47.133] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain! 
@@ -184,7 +203,7 @@ WARN [10-03|04:55:47.172] Beacon client online, but no consensus updates receive
 lighthouse_cl
 INFO Oct 03 04:59:39.001 WARN Low peer count                          peer_count: 0, service: slot_notifier
 WARN Oct 03 04:59:39.001 INFO Searching for peers                     current_slot: 78259, head_slot: 5248, finalized_epoch: 162, finalized_root: 0xa9c8…f1f7, peers: 0, service: slot_notifier
-WARN Oct 03 04:59:39.001 WARN Syncing deposit contract block cache    est_blocks_remaining: initializing deposits, service: slot_notifier
+WARN Oct 03 04:59:39.001 WARN Syncing deposit contract block cache    est_blocks_remaining: initializing deposits, service: slot_notifier.
 ```
 
 ![image](https://github.com/KingsHarald0/engram-guncelleme/blob/b49ef2f0b6301b819181bcbea7e05ecefc00417f/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-11-23%20172824.png)
